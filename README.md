@@ -38,8 +38,7 @@ Versión inicial del proyecto.
 
 ## Equipo de trabajo
 Integrantes:
-David Puga
-Andres Tulcanaza
+David Puga y Andres Tulcanaza
 
 ## Convención de commits
 El equipo utilizará mensajes de commit con el siguiente formato:
