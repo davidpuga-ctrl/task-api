@@ -9,7 +9,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Descargar código
         uses: actions/checkout@v4
@@ -21,25 +20,20 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Instalar Bandit
-        run: |
           pip install bandit
-
-      - name: Ejecutar análisis de seguridad
-        run: |
-          bandit -r app
 
       - name: Ejecutar pruebas
         run: |
           python -m pytest
 
+      - name: Ejecutar análisis de seguridad
+        run: |
+          bandit -r app
+
   release:
     needs: test
     runs-on: ubuntu-latest
-
     steps:
       - name: Preparar entrega simulada
         run: |
